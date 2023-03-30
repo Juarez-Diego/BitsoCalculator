@@ -1,0 +1,197 @@
+
+:root {
+    --white: #ffffff;
+    --dark: #004E98;
+    --primary: #3A6EA5;
+    --secondary: #FF6700;
+    --gray: #C0C0C0;
+    --less-gray: #EBEBEB;
+}
+
+h2,
+h3,
+h3,
+h4,
+h5 {
+
+    padding: 0px;
+    margin: 0px;
+}
+
+html,body{
+    margin: 0;
+    height: 100%;
+    font-family: "Lexend Deca","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: rgb(255,173,117);
+    background: linear-gradient(32deg, rgba(255,173,117,1) 0%, rgba(235,235,235,1) 49%, rgba(106,227,230,1) 100%);  
+    background-repeat: no-repeat;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%
+    /* border: 1.8px solid black; */
+}
+
+.main-subcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 620px;
+    width: 550px;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    border: none;
+    box-shadow: -1px -1px 25px -8px rgba(0,0,0,0.58);
+    border-radius: 5px;
+    /* background: rgb(255,173,117);
+    background: linear-gradient(32deg, rgba(255,173,117,1) 0%, rgba(235,235,235,1) 49%, rgba(106,227,230,1) 100%);  
+    background-repeat: no-repeat; */
+}
+
+.title{
+    color: var(--primary);
+    /* border: 1.8px solid black; */
+}
+
+.form-main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1.8px solid rgb(225, 23, 23); */
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 300px;
+    width: 75%;
+    /* border: 1.8px solid black; */
+    
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1.8px solid black; */
+}
+
+
+.input{
+    height: 22px;
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+}
+.input:focus{
+    outline: none;
+}
+
+
+.input-range{
+    height: 22px;
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+}
+
+#negative_range{
+    transform: rotateY(180deg);
+}
+
+/* .buttons-container{
+    margin-left: 5px;
+    margin-right: 5px;
+} */
+
+.clear-button{
+    cursor: pointer;
+    font-size: 15px;
+    height: 30px;
+    width: 75px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--dark);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.clear-button:hover{
+    color: var(--less-gray);
+    background-color: var(--primary);
+}
+
+
+
+.button{
+    cursor: pointer;
+    font-size: 15px;
+    height: 30px;
+    width: 75px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.button:hover{
+    /* color: var(--white); */
+    background-color: #fb8500;
+}
+
+
+.values-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1.8px solid black; */
+}
+
+.fee-container{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--primary);
+    /* border: 1.8px solid black; */
+}
+
+.values-subcontainer{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1.8px solid black; */
+}
+
+.fees-subcontainer{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1.8px solid black; */
+}
+
+.fees-title{
+    border-bottom: 2px dashed var(--secondary);
+}
+
+.fee-amount{
+    color: var(--dark);
+}

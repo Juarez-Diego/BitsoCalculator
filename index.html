@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="wid=device-width, inital-scale=1.0"> -->
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+	<title>Fees Calculator</title>
+</head>
+
+<body>
+	<div class="main-container">
+
+		<div class="main-subcontainer">
+			<h1 class="title">Bitso Profit & Fees Calculator</h1>
+
+		<div class="form-main-container">
+			<form id="form" class="form-container">
+				
+				<div class="input-container">
+					<label class="input-label" for="wallet">Purchase amount: </label>
+					<input id="wallet" type="number" name="wallet" class="input" step="100" onchange="calculateFees()">
+				</div>
+
+				<div class="input-container">
+					<label class="input-label"  for="buyPrice">Token buy price: </label>
+					<input id="buyPrice" type="number" name="buyPrice" class="input" step=".1" onchange="calculateFees()">
+				</div>
+
+				<div class="input-container">
+					<label class="input-label"  for="sellPrice">Token sell price: </label>
+					<input id="sellPrice" type="number" name="sellPrice" class="input" step=".1" onchange="calculateFees()">
+				</div>
+
+				<div class="input-container">
+					<label for="tokenRange">Price change(+): </label>
+					<input id="positive_range"  type="range"name="range" min="0" max="100" value="1" step="1" class="input-range" oninput="rangeValuePositive()">
+				</div>
+
+				<div class="input-container">
+					<label for="tokenRange">Price change(-): </label>
+					<input id="negative_range" type="range" min="-100" max="0" value="1" step="1" class="input-range" oninput="rangeValueNegative()">
+				</div>
+				
+				<div class="buttons-container">
+					<button onclick="clearInput()" class="clear-button">Clear</button>
+					<button onclick="calculateFees()" class="button">Calculate</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="values-container">
+			<div class="values-subcontainer">
+				<h3>Profit: </h3>
+				<h2 id="profit-main"><em>$&nbsp;</em><var id="profit">0</var></h2>
+			</div>
+
+			<div class="values-subcontainer">
+				<h3>Price change: </h3>
+				<h2 id="percent-main"><var id="percent">0</var><em>&nbsp;%</em></h2>
+			</div>
+		</div>
+
+		<div class="fee-container">
+			<div class="fees-subcontainer">
+				<h5 class="fees-title">Pending Orders:&nbsp;</h5>
+				<h4>0.50% Maker fees</h4>
+				<div>
+					<h2 id="maker-fee" class="fee-amount">$0</h2>
+				</div>
+			</div>
+
+			<div class="fees-subcontainer">
+				<h5 class="fees-title">Instant Orders:&nbsp;</h5>
+				<h4>0.65% Taker fees</h4>
+				<div>
+					<h2 id="taker-fee" class="fee-amount">$0</h2>
+				</div>
+			</div>
+		</div>
+
+		
+		</div>
+	</div>
+
+
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>
